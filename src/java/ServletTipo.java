@@ -47,7 +47,7 @@ public class ServletTipo extends HttpServlet {
                 typ.setNombre(nombre);
                 typ.setHabilidad(habilidad);
                 typ.GuardarTipos();
-                response.sendRedirect("Tipos/index.jsp");
+                response.sendRedirect("Tipo/index.jsp");
                 
             }else if(request.getParameter("editar3") != null){
                 int tipo_id = Integer.parseInt(request.getParameter("id"));

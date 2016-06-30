@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Crear tipos</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +59,7 @@
                              </div>
                               
                               
-                             <td><input type="submit" name="guardar3" value="guardar"></td>
+                             <input type="submit" class="btn btn-default" name="guardar3" value="guardar">
                          
                                 </table>
                         </p>

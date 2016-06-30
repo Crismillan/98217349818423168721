@@ -35,7 +35,7 @@ public class ServletPais extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             if(request.getParameter("crear")!=null){
                 String nombre = request.getParameter("nombre");
-                String creado_por =request.getParameter("creado_por");
+                String creado_por =request.getParameter("creado");
                 Pais pais = new Pais();
                 pais.setNombre(nombre);
                 pais.setCreado_por(creado_por);
@@ -45,9 +45,11 @@ public class ServletPais extends HttpServlet {
             else if(request.getParameter("actualizar")!=null){
                 int pais_id = Integer.parseInt(request.getParameter("pais_id"));
                 String nombre = request.getParameter("nombre");
+                String creado_por=request.getParameter("creado");
                 Pais pais = new Pais();
                 pais.setPais_id(pais_id);
                 pais.setNombre(nombre);
+                pais.setCreado_por(creado_por);
                 pais.ActualizarHabilidad();
                 response.sendRedirect("paises/index.jsp");
             }

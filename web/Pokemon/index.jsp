@@ -52,7 +52,7 @@
                             <h1 class="cover-heading">Pokemones</h1>
                             <p class="lead"></p>
 
-                            <table class="table table-bordered">
+                            <table class="table table-hover">
 
                                 <thead>
                                 <th>Pokemon_id</th>
@@ -77,8 +77,8 @@
                                             out.println("<td>" + con.getResultado().getString("tipo_id") + "</td>");
                                             out.println("<td>" + con.getResultado().getString("nom") + "</td>");
                                             out.println("<td>"+con.getResultado().getString("ciudad_id")+"</td>");
-                                            out.println("<td>" + "<a href='../ServletPokemon?eliminar=" + con.getResultado().getString("pokemon_id") + "'>Eliminar</a>" + "</td>");
-                                            out.println("<td>"+"<a href='editar.jsp?editar2="+con.getResultado().getString("pokemon_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+                                            out.println("<td>" + "<a href='../ServletPokemon?eliminar=" + con.getResultado().getString("pokemon_id") + "' class='btn btn-danger'>Eliminar</a>" + "</td>");
+                                            out.println("<td>"+"<a href='editar.jsp?editar2="+con.getResultado().getString("pokemon_id")+"' class='btn btn-success'>Editar</a>"+"</td>");
                                            
                                             out.println("</tr>");
                                         }
@@ -88,9 +88,9 @@
                                 </tbody>
 
                             </table> 
-
+                           
                         </div>
-                     <a href="../index.jsp"class="btn btn-danger">Volver</a>     <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+              <a href="crear.jsp" class="btn btn-primary">Crear Pokemon</a> <a href="newjsp.jsp" class="btn btn-primary">Reportes Pokemon</a>
 
 
                     </div>

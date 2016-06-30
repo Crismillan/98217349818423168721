@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d39e7179-0bdb-41d8-bcce-ac6970c49807">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pokemones.`pokemon_id` AS pokemones_pokemon_id,
+     pokemones.`nombre` AS pokemones_nombre,
+     pokemones.`fecha_nacimiento` AS pokemones_fecha_nacimiento,
+     pokemones.`numero` AS pokemones_numero,
+     pokemones.`tipo_id` AS pokemones_tipo_id,
+     pokemones.`creado_por` AS pokemones_creado_por,
+     pokemones.`ciudad_id` AS pokemones_ciudad_id
+FROM
+     `pokemones` pokemones]]>
+	</queryString>
+	<field name="pokemones_pokemon_id" class="java.lang.Integer"/>
+	<field name="pokemones_nombre" class="java.lang.String"/>
+	<field name="pokemones_fecha_nacimiento" class="java.lang.String"/>
+	<field name="pokemones_numero" class="java.lang.Integer"/>
+	<field name="pokemones_tipo_id" class="java.lang.Integer"/>
+	<field name="pokemones_creado_por" class="java.lang.Integer"/>
+	<field name="pokemones_ciudad_id" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="a0650ac0-1203-473f-b975-cc5b8eb97bff"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="0b2d3d62-31bf-44c9-8e35-dbc60eee00d0"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pokemones	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="f9904840-5779-4a28-8136-d99def11e505"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[lista pokemones 2016]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="0e8995d2-23ab-45a9-874d-69735566ddd3"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="89" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5192b292-c03a-426d-b829-4c2702fd0c7a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pokemon_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="89" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="af64995f-d116-4465-9383-c7b685a332f1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d5fdd433-ebe8-4293-9ba1-73b2ced4a9ca"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fecha_nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="58f21cab-ed26-4b94-9344-141bfb6531cf"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[numero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="80349cc2-b0b8-4e7d-a16b-5e2a756eaf80"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tipo_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="395" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c068fa1a-6837-4cda-9962-a8c08510b406"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[creado_por]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="474" y="0" width="81" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f77cf963-5962-4324-a069-d1d76a2fc91a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ciudad_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="14663f1f-d869-409b-a7ab-d590ac861ac5"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="100" height="20" uuid="5ba89ba8-dd1e-44d6-bc57-00f3c52bcc7a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_pokemon_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="100" y="0" width="58" height="20" uuid="6041214a-34b0-4571-8004-c1fc6ec89f59"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_nombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="158" y="0" width="79" height="20" uuid="ccf332a7-5567-40a5-94c4-17327527f9f8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_fecha_nacimiento}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="253" y="0" width="63" height="20" uuid="4702602f-d75d-4922-b1e0-f4df3e72543e"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_numero}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="334" y="0" width="61" height="20" uuid="71a0fec1-b295-4cf0-a3f9-d2185a92bad0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_tipo_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="414" y="0" width="60" height="20" uuid="8c2d9193-f9c5-4a3e-b6ac-4b9d0231747c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_creado_por}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="496" y="0" width="79" height="20" uuid="3a04ea85-76fb-43a8-b11e-d612b1806a5a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pokemones_ciudad_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="ad4bae7c-9c94-4dac-a196-0625c0d4bd2f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="70773e44-ca96-4464-89d0-3a9f980a66c6"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="c1c03dbc-b62c-442d-b7d8-bc17d60acb1f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

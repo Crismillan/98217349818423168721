@@ -85,10 +85,10 @@
                             </tbody>
                             
                         </table>
- 
+                            
                        
                     </div>
-                               <a href="../index.jsp"class="btn btn-danger">Volver</a>   <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+ <a href="crear.jsp" class="btn btn-primary">Crear Pais</a> <a href="newjsp.jsp" class="btn btn-primary">Reporte Paises</a>
 
 
                         </div>

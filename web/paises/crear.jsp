@@ -57,8 +57,8 @@
 
                         <button type="submit" name="crear" class="btn btn-default">Guardar</button> 
                     </form> 
-
-                        
+                    <br>
+                         <a href="index.jsp" class="btn btn-primary">Volver</a>
                     <div class="mastfoot">
                         <div class="inner">
                         </div>

@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Pokemones</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,9 @@
                             </nav>
                         </div>
                     </div>
+                    <br>
+                    <br>
+                    <br>
                     <form method="POST" action="../ServletPokemon">
                         <div class="inner cover">
                             <h1 class="cover-heading">Pokemon</h1>
@@ -77,14 +80,14 @@
                                 </div>
 
 
-                                <td><input type="submit" name="guardar2" value="guardar"></td>
-
+                                <input type="submit" class="btn btn-default" name="guardar2" value="guardar">
+                                <a href="index.jsp" class="btn btn-primary">Volver</a>
                             </table>
                             </p>
 
                             <p class="lead">
 
-                                <a href="index.jsp" class="btn btn-primary">Volver</a>
+                                
                             </p>
                         </div>
                     </form>

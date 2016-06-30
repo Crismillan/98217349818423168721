@@ -52,7 +52,7 @@
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead"></p>
 
-                        <table class="table table-bordered">
+                        <table class="table table-hover">
 
                             <thead>
                             <th>ID</th>
@@ -71,8 +71,8 @@
                                         out.println("<td>" + con.getResultado().getString("nombre") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("passwd") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("fecha") + "</td>");
-                                        out.println("<td>" + "<a href='../ServletUsuario?eliminar=" + con.getResultado().getString("usuario_id") + "'>Eliminar</a>" + "</td>");
-                                        out.println("<td>"+"<a href='editar.jsp?editar="+con.getResultado().getString("usuario_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+                                        out.println("<td>" + "<a href='../ServletUsuario?eliminar=" + con.getResultado().getString("usuario_id") + "' class='btn btn-danger'>Eliminar</a>" + "</td>");
+                                        out.println("<td>"+"<a href='editar.jsp?editar="+con.getResultado().getString("usuario_id")+"' class='btn btn-success'>Editar</a>"+"</td>");
                                                 
                                         out.println("</tr>");
                                     }
@@ -82,9 +82,9 @@
                             </tbody>
                             
                         </table> 
-                       
+                                
                     </div>
-                                <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+                                <a href="crear.jsp" class="btn btn-primary">Crear Usuario</a> <a href="newjsp.jsp" class="btn btn-primary" >Reporte Usuarios</a>
 
 
                         </div>

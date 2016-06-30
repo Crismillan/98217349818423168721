@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Habilidades</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
                         <h1 class="cover-heading">Habilidades</h1>
                         <p class="lead"></p>
 
-                        <table class="table table-bordered">
+                        <table class="table table-hover">
 
                             <thead>
                             <th>ID</th>
@@ -68,8 +68,8 @@
                                         out.println("<tr>");
                                         out.println("<td>" + con.getResultado().getString("habilidad_id") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("nombre") + "</td>");
-                                       out.println("<td>" + "<a href='../ServletHabilidad?eliminar=" + con.getResultado().getString("habilidad_id") + "'>Eliminar</a>" + "</td>");
-                                         out.println("<td>"+"<a href='editar.jsp?editar4="+con.getResultado().getString("habilidad_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+                                       out.println("<td>" + "<a href='../ServletHabilidad?eliminar=" + con.getResultado().getString("habilidad_id") + "' class='btn btn-danger'>Eliminar</a>" + "</td>");
+                                         out.println("<td>"+"<a href='editar.jsp?editar4="+con.getResultado().getString("habilidad_id")+"' class='btn btn-success'>Editar</a>"+"</td>");
                                               
                                         out.println("</tr>");
                                     }
@@ -81,7 +81,7 @@
                         </table> 
                        
                     </div>
-                               <a href="../index.jsp"class="btn btn-danger">Volver</a>   <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+                                <a href="crear.jsp" class="btn btn-primary">Crear Habilidad</a> <a href="newjsp.jsp" class="btn btn-primary">Reporte Habilidades</a>
 
 
                         </div>

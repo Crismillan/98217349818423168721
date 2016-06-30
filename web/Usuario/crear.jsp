@@ -62,10 +62,10 @@
                                  <input type="date" class="form-control" name="fecha" id="nombre" placeholder="Ingresar Fecha">
                              </div>
                               
-                             <td><input type="submit" name="guardar" value="guardar"></td>
+                             <input type="submit" class="btn btn-default" name="guardar" value="guardar">
                          
                                 </table>
-                        </p>
+                        
 
                         <p class="lead">
 

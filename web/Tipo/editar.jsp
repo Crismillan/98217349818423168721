@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Editar Tipos</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <h1 class="table table-bordered">Tipos</h1>
+                        <h1>Tipos</h1>
                         <p class="lead">                 <!Cuerpo >
                         <div class="">
 
@@ -75,7 +75,7 @@
                                         <input type="text" class="form-control" name="habilidad" value='<% out.println("" + con.getResultado().getString("habilidad_id")); %>' id="nombre" placeholder="Ingresar Nombre">
                                         </div>
                                         
-                                        <td><input type="submit" name="editar3" value="Actualizar"></td>
+                                        <input type="submit" class="btn btn-default" name="editar3" value="Actualizar">
                                         </form>
                                         <% }%> 
 

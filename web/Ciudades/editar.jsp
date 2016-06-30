@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <h1 class="table table-bordered">Ciudades</h1>
+                        <h1>Ciudades</h1>
                         <p class="lead">                 <!Cuerpo >
                         <div class="">
 

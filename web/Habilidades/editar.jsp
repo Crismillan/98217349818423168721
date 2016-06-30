@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Editar Habilidades</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <h1 class="table table-bordered">Habilidades</h1>
+                        <h1>Habilidades</h1>
                         <p class="lead">                 <!Cuerpo >
                         <div class="">
 
@@ -74,7 +74,7 @@
                                 </div>
 
 
-                                <td><input type="submit" name="editar4" value="Actualizar"></td>
+                                <td><input type="submit" class="btn btn-default" name="editar4" value="Actualizar"></td>
                             </form>
                             <% }%> 
 

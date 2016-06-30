@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <h1 class="table table-bordered">Usuarios</h1>
+                        <h1>Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
                         <div class="">
 
@@ -66,7 +66,7 @@
 
                                 <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
                                 <div>
-                                 <input type="text" readonly="true" value='<% out.println("" + con.getResultado().getString("usuario_id")); %>' name="id">
+                                 <input type="text" class="form-control" readonly="true" value='<% out.println("" + con.getResultado().getString("usuario_id")); %>' name="id">
                                 </div>
                                  <div class="form-group">
                                     <label for="nombre">Nombre</label>
@@ -81,7 +81,7 @@
                                             <input type="date" class="form-control" name="fecha" value='<% out.println("" + con.getResultado().getString("fecha")); %>' id="nombre" placeholder="Ingresar Fecha">
                                         </div>
 
-                                        <td><input type="submit" name="editar" value="Actualizar"></td>
+                                        <td><input type="submit" class="btn btn-default" name="editar" value="Actualizar"></td>
                                         </form>
                                         <% }%> 
 

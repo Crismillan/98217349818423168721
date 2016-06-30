@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Editar Pais</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <h1 class="table table-bordered">Ciudades</h1>
+                        <h1>Paises</h1>
                         <p class="lead">                 <!Cuerpo >
                         <div class="">
 

@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Cover Template for Bootstrap</title>
+        <title>Tipos</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../template/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@
                         <h1 class="cover-heading">Tipos</h1>
                         <p class="lead"></p>
 
-                        <table class="table table-bordered">
+                        <table class="table table-hover">
 
                             <thead>
                             <th>ID</th>
@@ -69,8 +69,8 @@
                                         out.println("<td>" + con.getResultado().getString("tipo_id") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("nombre") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("habilidad_id") + "</td>");
-                                        out.println("<td>" + "<a href='../ServletTipo?eliminar=" + con.getResultado().getString("tipo_id") + "'>Eliminar</a>" + "</td>");
-                                        out.println("<td>"+"<a href='editar.jsp?editar3="+con.getResultado().getString("tipo_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+                                        out.println("<td>" + "<a href='../ServletTipo?eliminar=" + con.getResultado().getString("tipo_id") + "' class='btn btn-danger'>Eliminar</a>" + "</td>");
+                                        out.println("<td>"+"<a href='editar.jsp?editar3="+con.getResultado().getString("tipo_id")+"' class='btn btn-success'>Editar</a>"+"</td>");
                                               
                                         out.println("</tr>");
                                     }
@@ -80,9 +80,9 @@
                             </tbody>
                             
                         </table> 
-                       
+                      
                     </div>
-                               <a href="../index.jsp"class="btn btn-danger">Volver</a>   <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+                             <a href="crear.jsp" class="btn btn-primary">Crear Tipo</a> <a href="newjsp.jsp" class="btn btn-primary">Reportes tipos</a>
 
 
                         </div>

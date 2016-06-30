@@ -49,7 +49,7 @@
     
     <br><br><br>
                     <div class="inner cover">
-                        <h1 class="cover-heading">Ciudades</h1>
+                        <h1 class="cover-heading">Paises</h1>
                         <p class="lead"></p>
 
                         <table class="table table-condensed table-hover">

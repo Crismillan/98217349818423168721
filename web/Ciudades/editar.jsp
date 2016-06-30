@@ -54,39 +54,50 @@
 
                         </div>
                         <%
-                            int id = Integer.parseInt(request.getParameter("editar5"));
-                            Coneccion con = new Coneccion();
-                            con.setConsulta("select * from Ciudades where Ciudad_id='" + id + "'");
+                        int id = Integer.parseInt(request.getParameter("actualizar"));
+                        Coneccion con = new Coneccion();
+                        String pais = "";
+                        con.setConsulta("select * from ciudades where ciudad_id ='" + id + "'");
+                    %>
+                    <div class="panel-body">
+                        <% while (con.getResultado().next()) {
+                                pais = con.getResultado().getString("pais_id");
                         %>
-                        <div class="panel-body">
-                            <% while (con.getResultado().next()) {  %>
 
-                            <form method="POST" action="../ServletCiudad?editar5=si">
-
-
-                                <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
-                                <input type="text" readonly="true" value='<% out.println("" + con.getResultado().getString("ciudad_id")); %>' name="id">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre </label>
-                                    <input type="text" class="form-control" name="nombre" value='<% out.println("" + con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar Nombre">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombre">Creado_por</label>
-                                    <input type="text" class="form-control" name="nombre" value='<% out.println("" + con.getResultado().getString("creado_por")); %>' id="nombre" placeholder="Ingresar Nombre">
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombre">Habilidad</label>
-                                        <input type="text" class="form-control" name="Pais" value='<% out.println("" + con.getResultado().getString("pais_id")); %>' id="nombre" placeholder="Ingresar Nombre">
-                                        </div>
-                                        
-                                        <td><input type="submit" name="editar5" value="Actualizar"></td>
-                                        </form>
-                                        <% }%> 
+                        <form method="POST" action="../ServletCiudad?actualizar=si">
+                            <div class="form-group">
+                                <label for="ciudad_id">ID</label>
+                                <input type="text" readonly="true" id="ciudad_id" name="ciudad_id" class="form-control" value='<% out.println("" + con.getResultado().getString("ciudad_id")); %>'>
+                            </div>
+                            <div class="form-group">    
+                                <label for="tipo"> Nombre </label>
+                                <input type="text" class="form-control" name="nombre" value='<% out.println("" + con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar nombre">
+                            </div>
+                            <div class="form-group">    
+                                <label for="tipo">Creado</label>
+                                <input type="text" class="form-control" name="creado" value='<% out.println("" + con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar nombre">
+                            </div>
+                            <% }%>
+                            <div class="form-group">
+                                <label for="pais_id"> Pais </label>
+                                <select name="pais_id" id="pais_id" class="form-control">
+                                    <% con.setConsulta("select * from paises");%>
+                                    <%while (con.getResultado().next()) {
+                                            if (pais.equals(con.getResultado().getString("pais_id"))) {
+                                                out.println("<option value='" + con.getResultado().getString("pais_id") + "' selected>" + con.getResultado().getString("nombre") + "</option>");
+                                            } else {
+                                                out.println("<option value='" + con.getResultado().getString("pais_id") + "'>" + con.getResultado().getString("nombre") + "</option>");
+                                            }
+                                        }%>
+                                </select>
+                            </div>
+                            <button type="submit" name="actualizar" class="btn btn-default">Actualizar</button>
+                        </form>
 
                                 </div>
 
                         </div>
-                        </p>
+                    
 
                         <p class="lead">
 

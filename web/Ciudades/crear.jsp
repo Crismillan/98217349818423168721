@@ -1,3 +1,4 @@
+<%@page import="accesodato.Coneccion"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,37 +43,31 @@
                         </div>
                     </div>
                     <form method="POST" action="../ServletCiudad">
-                    <div class="inner cover">
-                        <h1 class="cover-heading">Ciudades</h1>
-                        <p class="lead">                 <!Cuerpo >
+                            <div class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre </label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                        <div class="form-group">
+                                <label for="nombre">Creado por </label>
+                                <input type="text" class="form-control" name="creado" id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                        <%
+                        Coneccion con = new Coneccion();
+                        %>
 
-                                <table class="table table-bordered">
-                                    
-                                
-                             <div class="form-group">
-                                 <label for="nombre">Nombre</label>
-                                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
-                             </div>
-                              <div class="form-group">
-                                 <label for="nombre">Creado por</label>
-                                 <input type="text" class="form-control" name="Creado por" id="nombre" placeholder="Ingresar Password">
-                             </div>
-                              <div class="form-group">
-                                 <label for="nombre">Pais id</label>
-                                 <input type="text" class="form-control" name="Pais id" id="nombre" placeholder="Ingresar Fecha">
-                             </div>
-                              
-                             <td><input type="submit" name="guardar5" value="guardar"></td>
-                         
-                                </table>
-                        </p>
-
-                        <p class="lead">
-
-                            <a href="index.jsp" class="btn btn-primary">Volver</a>
-                        </p>
-                    </div>
-                            </form>
+                            <div class="form-group">
+                                <label for="pais">Pais </label>
+                                <select name="pais_id" class="form-control" id="paises">
+                                    <%  con.setConsulta("select * from paises");
+                                        while (con.getResultado().next()) {
+                                            out.println("<option value='" + con.getResultado().getString("pais_id") + "'>" + con.getResultado().getString("nombre") + "</option>");
+                                    }%> 
+                                </select>
+                            </div>
+                            <button type="submit" name="crear" class="btn btn-default">Crear</button>
+                        </form>
                         
                     <div class="mastfoot">
                         <div class="inner">
@@ -89,7 +84,7 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../template/js/bootstrap.min.js"></script>
+        <script src="../template/js/bootstrap.min.js"></scrip
+    </body>t>
 
-    </body>
 </html>

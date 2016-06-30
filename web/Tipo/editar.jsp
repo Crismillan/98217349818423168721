@@ -65,7 +65,7 @@
 
 
                                 <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
-                                <input type="text" readonly="true" value='<% out.println("" + con.getResultado().getString("tipo_id")); %>' name="id">
+                                <input type="text" class="form-control" readonly="true" value='<% out.println("" + con.getResultado().getString("tipo_id")); %>' name="id">
                                 <div class="form-group">
                                     <label for="nombre">Tipo </label>
                                     <input type="text" class="form-control" name="nombre" value='<% out.println("" + con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar Nombre">

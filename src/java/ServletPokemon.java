@@ -13,26 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import negocio.Pokemon;
 
-/**
- *
- * @author emanuel
- */
 @WebServlet(urlPatterns = {"/ServletPokemon"})
 public class ServletPokemon extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+       try (PrintWriter out = response.getWriter()) {
             
 
             if (request.getParameter("eliminar")!=null) {
@@ -43,13 +30,14 @@ public class ServletPokemon extends HttpServlet {
                 pok.BorrarPokemon();
                 response.sendRedirect("Pokemon/index.jsp");
                 
-            } else if (request.getParameter("guardar2") != null) {
+            } else if(request.getParameter("guardar2") != null) {
                 String Nombre=request.getParameter("nombre");
                 int Numero=Integer.parseInt(request.getParameter("numero"));
                 String fecha=request.getParameter("fecha");
                 int Tipo=Integer.parseInt(request.getParameter("tipo"));
                 int Creado=Integer.parseInt(request.getParameter("creado"));
-                int Ciudad_id=Integer.parseInt(request.getParameter("ciudad_id"));
+                int Ciudad_id=Integer.parseInt(request.getParameter("ciudad"));
+                
                 Pokemon pok = new Pokemon();
                 pok.setNombre(Nombre);
                 pok.setNumero(Numero);
@@ -57,7 +45,8 @@ public class ServletPokemon extends HttpServlet {
                 pok.setTipo_id(Tipo);
                 pok.setCreado_por(Creado);
                 pok.setCiudad_id(Ciudad_id);
-                pok.GuardarPokemon();
+                pok.save();
+                
                 response.sendRedirect("Pokemon/index.jsp");
                 
                 

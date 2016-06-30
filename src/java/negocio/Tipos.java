@@ -51,7 +51,7 @@ public class Tipos {
     }
     
     public void BorrarTipos(){
-    con.setInsertar("update pokemones  set estado='pasivo' where pokemon_id='"+this.getTipo_id() +"'");
+    con.setInsertar("update tipos  set estado='pasivo' where tipo_id='"+this.getTipo_id() +"'");
     
     }
     

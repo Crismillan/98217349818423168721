@@ -34,10 +34,9 @@ public class ServletTipo extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             if (request.getParameter("eliminar")!=null) {
-                int id=Integer.parseInt(request.getParameter("eliminar"));
-               out.println("Eliminar ID:"+id);
+               int id=Integer.parseInt(request.getParameter("eliminar"));
                Tipos typ=new Tipos();
-               typ.getTipo_id();
+               typ.setTipo_id(id);
                typ.BorrarTipos();
                response.sendRedirect("Tipo/index.jsp");
 

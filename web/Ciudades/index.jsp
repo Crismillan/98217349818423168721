@@ -72,7 +72,7 @@
                                         out.println("<td>" + con.getResultado().getString("creado_por") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("pais_id") + "</td>");
                                         out.println("<td>" + "<a href='../ServletCiudad?eliminar=" + con.getResultado().getString("ciudad_id") + "'>Eliminar</a>" + "</td>");
-                                        out.println("<td>"+"<a href='editar.jsp?editar5="+con.getResultado().getString("ciudad_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+                                        out.println("<td>"+"<a href='editar.jsp?actualizar="+con.getResultado().getString("ciudad_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
                                               
                                         out.println("</tr>");
                                     }

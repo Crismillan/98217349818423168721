@@ -33,41 +33,34 @@ public class ServletCiudad extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-             if (request.getParameter("eliminar")!=null) {
-            int id=Integer.parseInt(request.getParameter("eliminar"));
-            out.println("Eliminar ID:"+id);
-            Ciudad ciu=new Ciudad();
-            ciu.setCiudad_id(id);
-            ciu.BorrarHabilidad();
-            response.sendRedirect("Ciudades/index.jsp");
-                
-
-            } else if (request.getParameter("guardar5") != null) {
-               String nombre = request.getParameter("nombre");
+            if(request.getParameter("crear")!=null){
+                String nombre = request.getParameter("nombre");
                 int pais_id = Integer.parseInt(request.getParameter("pais_id"));
-
-               String creado_por=request.getParameter("creado_por");
-               Ciudad ciu=new Ciudad();
-               ciu.setNombre(nombre);
+                String creado_por =request.getParameter("creado");
+                Ciudad ciu = new Ciudad();
+                ciu.setNombre(nombre);
                 ciu.setPais_id(pais_id);
                 ciu.setCreado_por(creado_por);
-               ciu.GuardarHabilidad();               
-               response.sendRedirect("Ciudades/index.jsp");
-                
-                
-            }else if(request.getParameter("editar5") != null){
-                int ciudad_id = Integer.parseInt(request.getParameter("id"));
-                String Nombre = request.getParameter("nombre");
-                String Creado_por=request.getParameter("creado_por");
-                int pais_id=Integer.parseInt(request.getParameter("pais_id"));
-                Ciudad ciu=new Ciudad();
+                ciu.GuardarHabilidad();
+                response.sendRedirect("Ciudades/index.jsp");
+            }
+            else if(request.getParameter("actualizar")!=null){
+                int ciudad_id = Integer.parseInt(request.getParameter("ciudad_id"));
+                String nombre = request.getParameter("nombre");
+                int pais_id = Integer.parseInt(request.getParameter("pais_id"));
+                Ciudad ciu = new Ciudad();
                 ciu.setCiudad_id(ciudad_id);
-                ciu.setNombre(Nombre);
-                ciu.setCreado_por(Creado_por);
+                ciu.setNombre(nombre);
                 ciu.setPais_id(pais_id);
                 ciu.ActualizarHabilidad();
                 response.sendRedirect("Ciudades/index.jsp");
-                
+            }
+            else if(request.getParameter("eliminar")!=null){
+                int ciudad_id = Integer.parseInt(request.getParameter("eliminar"));
+                Ciudad ciu = new Ciudad();
+                ciu.setCiudad_id(ciudad_id);
+                ciu.BorrarHabilidad();
+                response.sendRedirect("Ciudades/index.jsp");
             }
         }
     }

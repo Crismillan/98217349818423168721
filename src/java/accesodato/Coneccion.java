@@ -43,6 +43,10 @@ public class Coneccion {
     public ResultSet getResultado(){
         return rs;
     }
+    public ResultSet getRs() throws SQLException{
+        return rs;
+    }
+
 
     public void setInsertar(String sql){
          try {

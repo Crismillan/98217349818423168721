@@ -79,22 +79,13 @@ public class Pokemon {
         return ciudad_id;
     }
 
-    public void setCiudad_id(int ciudad_id) {
-        this.ciudad_id = ciudad_id;
-    }
     
-
-    public Coneccion getCon() {
-        return con;
+    public void save(){
+        con.setInsertar("insert into Pokemones(nombre,fecha_nacimiento,numero,tipo_id,estado,creado_por,ciudad_id) values('"+this.getNombre()+"','"+this.getFecha_nacimiento()+"','"+this.getNumero()+"','"+this.getTipo_id()+"','activo','"+this.getCreado_por()+"','"+this.getCiudad_id()+"')");
     }
-
-    public void setCon(Coneccion con) {
-        this.con = con;
-    }
-    public void GuardarPokemon(){
-    
-    con.setInsertar("insert into pokemones(nombre,fecha_nacimiento,numero,tipo_id,estado,creado_por,ciudad_id) values('"+this.getNombre()+"','"+this.getFecha_nacimiento()+"','"+this.getNumero()+"','"+this.getTipo_id() +"','activo','"+this.getCreado_por() +",'"+this.getCiudad_id()+"')  ");
-    }
+        public void setCiudad_id(int ciudad_id){
+            this.ciudad_id=ciudad_id;
+            }
     
     public void BorrarPokemon(){
     con.setInsertar("update pokemones  set estado='pasivo' where pokemon_id='"+this.getPokemon_id() +"'");
